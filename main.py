@@ -82,7 +82,7 @@ class Users(Resource): # Endpoint for API
 
         if args['userId'] in list(data['userId']):
             data = data[data['userId'] != args['userId']]
-            data.to_csv('users_csv', index=False)
+            data.to_csv('users.csv', index=False)
 
             return {'data': data.to_dict()}, 200
 
